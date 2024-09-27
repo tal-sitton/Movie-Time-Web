@@ -36,11 +36,6 @@ body {
     min-height: 100vh;
 }
 
-h1 {
-    font-size: 3em;
-    line-height: 1.1;
-}
-
 button {
     border-radius: 8px;
     border: 1px solid transparent;
@@ -62,10 +57,29 @@ button:focus-visible {
     outline: 4px auto -webkit-focus-ring-color;
 }
 
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #242424;
+    white-space: nowrap;
+    gap: 1em;
+    padding: 10px 16px 10px 16px;
+    transition: bottom 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+#header {
+    background-color: #242424;
+}
+
 @media (prefers-color-scheme: light) {
     :root {
-        color: #213547;
+        color: #ffffff;
         background-color: #ffffff;
+    }
+
+    h1 {
+        color: #000000;
     }
 
     a:hover {
@@ -74,5 +88,22 @@ button:focus-visible {
 
     button {
         background-color: #f9f9f9;
+    }
+
+    footer {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+    #header {
+        background-color: #ffffff;
+    }
+
+    #dubbed-filter {
+        color: #000000;
+    }
+
+    #screening-dialog {
+        color: #ffffff;
     }
 }

@@ -26,7 +26,6 @@ function App(): React.JSX.Element {
 
     const setScreening: React.Dispatch<React.SetStateAction<ScreeningInfo | null>> = (_screening: React.SetStateAction<ScreeningInfo | null>) => {
         if (_screening) {
-            console.log('pushing state');
             window.history.pushState({screeningDialogOpen: true}, '');
             window.history.pushState({screeningDialogOpen: true}, '');
             _setScreening(_screening);
@@ -117,7 +116,7 @@ function App(): React.JSX.Element {
                         <ScreeningsContext.Provider
                             value={{screeningsInfo: screenings, filteredScreenings, setFilteredScreenings}}>
                             <Box width="90vw" maxWidth="80em" padding={"16px"}>
-                                <Box position='sticky' top='0px' zIndex={1} bgcolor={"#242424"} paddingBottom={'1em'}>
+                                <Box position='sticky' top='0px' zIndex={1} paddingBottom={'1em'} id={'header'}>
                                     <Title/>
                                     <Filters setIsOpendFilter={setIsOpendFilter}/>
                                 </Box>

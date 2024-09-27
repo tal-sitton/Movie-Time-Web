@@ -37,15 +37,7 @@ const Metadata: React.FC<{ children: React.ReactNode }> = ({children}) => {
                 bottom: isScrollingUp ? "0" : isBottom ? "inherit" : "-100px", // moves footer up or down
                 right: isScrollingUp ? 0 : "inherit",
                 left: isScrollingUp ? 0 : "inherit",
-                backgroundColor: "#242424",
-                transition: "bottom 0.3s ease-in-out, opacity 0.3s ease-in-out",
-                opacity: isScrollingUp || isBottom ? 0.97 : 0,
-                padding: "10px 16px 10px 16px",
-                display: "flex",
-                justifyContent: "center",
-                gap: "1em",
-                alignItems: "center",
-                whiteSpace: "nowrap",
+                opacity: isScrollingUp || isBottom ? 0.97 : 0
             }}
         >
             <span style={{textAlign: "left"}}>Created By Tal Sitton</span>

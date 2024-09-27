@@ -29,7 +29,7 @@ const ScreeningDialog: React.FC = () => {
 
     return (
         <Dialog open={true} onClose={() => setScreening(null)} sx={{direction: "rtl"}}
-                PaperProps={{sx: {bgcolor: "primary.dark", borderRadius: "0.5em"}}}>
+                PaperProps={{sx: {bgcolor: "primary.dark", borderRadius: "0.5em"}, id:"screening-dialog"}}>
             <DialogTitle variant={"h3"} fontSize={{xs:"2em", md: "3em"}}
                          align={"center"}>{screening.title + (screening.dubbed ? " - מדובב":"")}</DialogTitle>
             <hr style={{width: "95%", marginBottom: "1em"}}/>

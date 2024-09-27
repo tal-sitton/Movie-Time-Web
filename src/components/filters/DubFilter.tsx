@@ -16,7 +16,7 @@ const DubFilter: React.FC<object> = () => {
     }
 
     return (
-        <FormControlLabel sx={{width: {md: "100%"}}}
+        <FormControlLabel sx={{width: {md: "100%"}}} id={"dubbed-filter"}
                           control={
                               <Switch
                                   checked={checkedDubbed}
