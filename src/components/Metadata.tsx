@@ -6,6 +6,8 @@ const Metadata: React.FC<{ children: React.ReactNode }> = ({children}) => {
     const [isScrollingUp, setIsScrollingUp] = useState(true);
     const [prevScrollPos, setPrevScrollPos] = useState(window.scrollY);
 
+    const OS = /android/i.test(navigator.userAgent) ? 'android' : 'other';
+
     const handleScroll = () => {
         const currentScrollPos = window.scrollY;
         const windowHeight = document.documentElement.scrollHeight - window.innerHeight;
@@ -47,14 +49,23 @@ const Metadata: React.FC<{ children: React.ReactNode }> = ({children}) => {
             }}
         >
             <span style={{textAlign: "left"}}>Created By Tal Sitton</span>
-            <a href="https://github.com/tal-sitton/Movie-Time-Web" target={"_blank"} style={{display: "inline-flex"}}>
-                <img alt="Github" style={{width: "100%"}}
-                     src={"https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"}></img>
-            </a>
+            {OS === "android" ?
+                <a href="https://play.google.com/store/apps/details?id=com.talsitton.movietime"
+                   style={{display: "inline-flex"}}>
+                    <img alt="Play Store" style={{width: "100%"}}
+                         src={"https://img.shields.io/badge/Google_Play-414141?style=for-the-badge&logo=google-play&logoColor=white"}></img>
+                </a>
+                :
+                <a href="https://github.com/tal-sitton/Movie-Time-Web" target={"_blank"}
+                   style={{display: "inline-flex"}}>
+                    <img alt="Github" style={{width: "100%"}}
+                         src={"https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"}></img>
+                </a>
+            }
             <a href={"https://www.paypal.com/donate/?hosted_button_id=QFJWKB7U7Y8VL"} target={"_blank"}
                style={{display: "inline-flex"}}>
                 <img alt="Paypal" style={{width: "100%"}}
-                     src={"https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white"}></img>
+                     src={"https://img.shields.io/badge/Donate-00457C?style=for-the-badge&logo=paypal&logoColor=white"}></img>
             </a>
         </footer>
     </>
