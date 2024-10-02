@@ -3,6 +3,8 @@ import Screening from "./Screening.tsx";
 import Grid from '@mui/material/Unstable_Grid2';
 import {ScreeningsContext} from "../contexts/screeningsContext.ts";
 import {ScreeningInfo} from "../types";
+import {Box, Typography} from "@mui/material";
+import noResults from "../assets/no-results.png";
 
 const Screenings: React.FC<{
     shouldUpdateScreenings: boolean,
@@ -65,14 +67,24 @@ const Screenings: React.FC<{
         };
     }, [isLoading, filteredScreenings, visibleItems]);
 
-    return <Grid container spacing={{xs: 0.5, md: 2}} justifyContent={'center'}
-                 sx={{/*height: {xs: '40vh', md: '62vh'},*/ overflowY: 'auto'}} onScroll={handleScroll}
-                 flexDirection={"row-reverse"}>
-        {visibleItems?.map((screeningInfo, index) => {
-            return <Grid key={index} xs={4} md={2}>
-                <Screening info={screeningInfo}/>
-            </Grid>
-        })}
-    </Grid>
+    return <>
+    {visibleItems.length ? <Grid container spacing={{xs: 0.5, md: 2}} justifyContent={'center'}
+                                 sx={{/*height: {xs: '40vh', md: '62vh'},*/ overflowY: 'auto'}} onScroll={handleScroll}
+                                 flexDirection={"row-reverse"}>
+            {visibleItems?.map((screeningInfo, index) => {
+                return <Grid key={index} xs={4} md={2}>
+                    <Screening info={screeningInfo}/>
+                </Grid>
+            })}
+        </Grid>
+        : <Box>
+            <Typography variant={"h4"} fontFamily={"Rubik Dirt"}>לא נמצאו הקרנות</Typography>
+            <img src={noResults} alt={"no results found"} style={{width: "13em"}}/>
+            <Typography variant={"h4"}>נסה לבחור יום אחר, או סינונים אחרים</Typography>
+        </Box>
+
+    }
+    </>;
 }
+
 export default Screenings
