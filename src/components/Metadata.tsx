@@ -2,6 +2,11 @@ import React, {useEffect, useState} from "react";
 
 const Metadata: React.FC<{ children: React.ReactNode }> = ({children}) => {
 
+    if (window.location.pathname === '/redirect') {
+        window.location.href = 'https://code.sitton.dev/device-based-redirect?android=https://play.google.com/store/apps/details?id=com.talsitton.movietime&other=https://movietime.sitton.dev/'
+    }
+
+
     const [isBottom, setIsBottom] = useState(false);
     const [isScrollingUp, setIsScrollingUp] = useState(true);
     const [prevScrollPos, setPrevScrollPos] = useState(window.scrollY);
