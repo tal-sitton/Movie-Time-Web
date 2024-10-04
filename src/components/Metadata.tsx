@@ -29,16 +29,6 @@ const Metadata: React.FC<{ children: React.ReactNode }> = ({children}) => {
         };
     }, [prevScrollPos]);
 
-
-    if (window.location.pathname === '/app') {
-        window.location.href = 'https://play.google.com/store/apps/details?id=com.talsitton.movietime'
-        return <></>
-    }
-    if (window.location.pathname === '/redirect') {
-        window.location.href = `https://code.sitton.dev/device-based-redirect?android=${window.location.origin}/app&other=${window.location.origin}`
-        return <></>
-    }
-
     return <>
         {children}
         <footer
