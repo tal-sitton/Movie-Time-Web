@@ -12,7 +12,7 @@
 
 מתלבטים בין מספר סרטים? לא יודעים איזה סרט עדיף? בלחיצת כפתור אחת על ההקרנה תוכלו לקבל את תקציר העלילה והדירוג של הסרט!
 
-אחרי שסיננתם את התוצאות ומצאתם את ההקרנה שאתם רוצים ללכת אליה, כל שעליכם לעשות זה ללחוץ על ההקרנה באתר, והיא מיד תנווט אתכם לאתר הקולנוע, לקניית כרטיסים. כל שנותר הוא לקנות כרטיסים, לקחת פופקורן, ולהנות בסרט!
+`אחרי שסיננתם את התוצאות ומצאתם את ההקרנה שאתם רוצים ללכת אליה, כל שעליכם לעשות זה ללחוץ על ההקרנה, ומיד תנווטו לאתר הקולנוע, לקניית כרטיסים. כל שנותר הוא לקנות כרטיסים, לקחת פופקורן, ולהנות בסרט!
 
 </div>
 
@@ -27,7 +27,7 @@
 
 Instead of wasting time endlessly searching through all the different cinema chain websites just to find an interesting movie to watch, there's a new solution – **Movie Time**: all the information you need is in one place!
 
-The website will show you the movies currently screening in the leading cinemas in Israel: Yes Planet, Hot Cinema, Cinema City, Rav Hen, Lev, and Movieland!
+The site will show you the movies currently in Israel's leading cinemas: Yes Planet, Hot Cinema, Cinema City, Rav Hen, Lev, and Movieland!
 
 With Movie Time, you can see the movies playing today and filter the results by specific movies or by your preferred cinemas – all in one place.
 
