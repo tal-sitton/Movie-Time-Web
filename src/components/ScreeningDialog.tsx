@@ -4,6 +4,8 @@ import {ScreeningContext} from "../contexts/screeningContext.ts";
 import {ScreeningsContext} from "../contexts/screeningsContext.ts";
 import {MovieInfo} from "../types/movieInfo.ts";
 
+const CORS_PROXY = "https://api.allorigins.win/get?url=";
+
 const ScreeningDialog: React.FC = () => {
     const [screening, setScreening] = React.useContext(ScreeningContext);
     const {screeningsInfo} = React.useContext(ScreeningsContext);
@@ -27,6 +29,8 @@ const ScreeningDialog: React.FC = () => {
         minute: "2-digit"
     });
 
+    image_url = CORS_PROXY + encodeURIComponent(movieInfo.image_url);
+
     return (
         <Dialog open={true} onClose={() => setScreening(null)} sx={{direction: "rtl"}}
                 PaperProps={{sx: {bgcolor: "primary.dark", borderRadius: "0.5em"}, id:"screening-dialog"}}>
@@ -40,7 +44,7 @@ const ScreeningDialog: React.FC = () => {
                     </Box>
                 </Box>
                 <Box display={"flex"} minWidth="11em" flexDirection="column" justifyContent={"center"}>
-                    <Box component="img" src={movieInfo.image_url} alt={movieInfo.english_name}
+                    <Box component="img" src={image_url} alt={movieInfo.english_name}
                          sx={{height: "90%", width: "fit-content"}}/>
                     <Box display={"flex"} alignItems="center" justifyContent="center">
                         <Typography variant={"h5"} align={"center"}>{movieInfo.rating}</Typography>
