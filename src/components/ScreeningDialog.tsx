@@ -29,7 +29,7 @@ const ScreeningDialog: React.FC = () => {
         minute: "2-digit"
     });
 
-    image_url = CORS_PROXY + encodeURIComponent(movieInfo.image_url);
+    const image_url = CORS_PROXY + encodeURIComponent(movieInfo.image_url);
 
     return (
         <Dialog open={true} onClose={() => setScreening(null)} sx={{direction: "rtl"}}
