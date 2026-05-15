@@ -4,7 +4,7 @@ import {ScreeningContext} from "../contexts/screeningContext.ts";
 import {ScreeningsContext} from "../contexts/screeningsContext.ts";
 import {MovieInfo} from "../types/movieInfo.ts";
 
-const CORS_PROXY = "https://test.cors.workers.dev/?";
+const CORS_PROXY = "https://corsproxy.sitton.dev/?";
 
 const ScreeningDialog: React.FC = () => {
     const [screening, setScreening] = React.useContext(ScreeningContext);
